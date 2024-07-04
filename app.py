@@ -1,3 +1,4 @@
+import os
 from flask import Flask, render_template, send_from_directory
 
 app = Flask(__name__)
@@ -15,4 +16,5 @@ def send_csv():
     return send_from_directory('.', 'stats_paises.csv')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port, debug=True)
