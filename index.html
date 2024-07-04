@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adivinhe o país</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <div id="game">
+        <h1>Adivinhe o país misterioso!</h1>
+        <p>A cada palpite errado, uma nova dica será exibida.</p>
+        <input type="text" id="guess" placeholder="Digite seu palpite" disabled />
+        <button id="guessButton" onclick="checkGuess()" disabled>Adivinhar</button>
+        <div id="message"></div>
+        <div id="hint"></div>
+        <div id="countryInfo">
+            <h2>Informações do país</h2>
+            <table>
+                <tr><th>Nome</th><td id="countryName"></td></tr>
+                <tr><th>PIB per capita</th><td id="countryGDP"></td></tr>
+                <tr><th>Agricultura (% do PIB)</th><td id="countryAgriculture"></td></tr>
+                <tr><th>Taxa de desemprego</th><td id="countryUnemployment"></td></tr>
+                <tr><th>Mortalidade infantil</th><td id="countryInfantMortality"></td></tr>
+                <tr><th>Área (km²)</th><td id="countryArea"></td></tr>
+                <tr><th>Densidade populacional</th><td id="countryDensity"></td></tr>
+                <tr><th>População</th><td id="countryPopulation"></td></tr>
+                <tr><th>Localização</th><td id="countryRegion"></td></tr>
+            </table>
+        </div>
+        <button id="playAgainButton" onclick="playAgain()" style="display:none;">Jogar Novamente</button>
+    </div>
+</body>
+</html>
