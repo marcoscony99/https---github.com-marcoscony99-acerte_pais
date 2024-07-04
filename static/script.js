@@ -26,7 +26,7 @@ const regioes = {
 };
 
 // Carregar CSV
-Papa.parse("stats_paises.csv", {
+Papa.parse("/stats_paises.csv", {
     download: true,
     header: true,
     complete: function(results) {
@@ -48,6 +48,7 @@ Papa.parse("stats_paises.csv", {
         console.error('Erro ao carregar CSV:', error);
     }
 });
+
 
 function sortearPais() {
     paisEscolhido = paises[Math.floor(Math.random() * paises.length)];
